@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="customize.css"> -->
+    <link rel="stylesheet" href="customize.css">
+    <script src="../lib/p5.min.js"></script>
+    <script src="../js/localValues.js"></script>
+</head>
+
+<body>
+    <header class="bar">
+        <a href="../index.html" class="logo1"><img src="../images/image.png" alt=""></a>
+        <div class="fas fa-bars"></div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#service">services</a></li>
+                <li><a href="#portfolio">portfolio</a></li>
+                <li><a href="#team">team</a></li>
+                <li><a href="careers.html">career</a></li>
+                <li><a href="#contact">contact</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <fieldset class='current-fieldset' class="container">
+        <div class="container1">
+            <div class="header">
+                <div class="column-image">
+                    <div id="image-div">
+                        <a href="../index.html" class="logo"><img src="../images/image.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="column-header">
+                    <h1 id="title"> Customization Page</h1>
+                    <!-- <p id="description">To get your perfect DreamyBot, you will need to go through three sessions. Input
+                        your preference to get your own Dreamybot!</p> -->
+
+                    <p id="moreMoney">
+                        We want to emphasize that different pricing tiers <b>DO NOT</b> reflect any bias or
+                        discrimination
+                        towards various preferences. Rather, they are based on varying research and material costs
+                        associated with different types of customization.</p>
+                </div>
+            </div>
+
+            <!-- <form id="survey-form"> -->
+            <h2 class="session"> 1. Basic Information</h2>
+            <p class="session_description">First, choose the basic information of your own DreamyBot.</p>
+            <div class="question-container">
+                <div class="one-choice">
+                    <div class="form-group">
+                        <label for="choice">Age</label>
+                        <small class="Help" class="form-text text-muted">Pick the age of your DreamyBot when you receive
+                            them.</small>
+                        <div class="options">
+                            <select class="form-control form-control-lg age-option">
+                                <option value="Large select">Large select</option>
+                                <option value="Baby" ageCost="10000">Baby</option>
+                                <option value="1 year old" ageCost="12000">1 year old ( $12,000)</option>
+                                <option value="2 years old" ageCost="14000">2 years old ( $14,000)</option>
+                                <option value="3 years old" ageCost="16000">3 years old ( $16,000)</option>
+                                <option value="4 years old" ageCost="18000">4 years old ( $18,000)</option>
+                                <option value="5 years old" ageCost="20000">5 years old ( $20,000)</option>
+                                <option value="6 years old" ageCost="22000">6 years old ( $22,000)</option>
+                                <option value="7 years old" ageCost="24000">7 years old ( $24,000)</option>
+                                <option value="8 years old" ageCost="26000">8 years old ( $26,000)</option>
+                                <option value="9 years old" ageCost="28000">9 years old ( $28,000)</option>
+                                <option value="10 years old" ageCost="30000">10 years old ( $30,000)</option>
+                                <option value="11 years old" ageCost="32000">11 years old ( $32,000)</option>
+                                <option value="12 years old" ageCost="34000">12 years old ( $34,000)</option>
+                                <option value="13 years old" ageCost="36000">13 years old ( $36,000)</option>
+                                <option value="14 years old" ageCost="38000">14 years old ( $38,000)</option>
+                                <option value="15 years old" ageCost="40000">15 years old ( $40,000)</option>
+                                <option value="16 years old" ageCost="42000">16 years old ( $42,000)</option>
+                                <option value="17 years old" ageCost="44000">17 years old ( $44,000)</option>
+                            </select>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <div class="one-choice">
+                    <div><label for="choice">Gender</label></div>
+                    <small class="Help" class="form-text text-muted">Pick the gender of your DreamyBot.</small>
+                    <hr>
+                    <div class="options">
+                        <div class="one-choice">
+                            <div class="form-check">
+                                <input class="form-check-input " type="radio" name="genderRadios" value="girl">
+                                <label class="form-check-label gender-option" for="genderRadios1">Girl</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input " type="radio" name="genderRadios" value="boy">
+                                <label class="form-check-label gender-option" for="genderRadios2">Boy</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input " type="radio" name="genderRadios"
+                                    value="non binary gender">
+                                <label class="form-check-label gender-option" for="genderRadios3">Non-Binary
+                                    Gender</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input " type="radio" name="genderRadios" value=",">
+                                <label class="form-check-label gender-option" for="genderRadios4">I want my kid to
+                                    choose by
+                                    themselves. ($10,000)</label>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- 关闭 Gender 的容器 -->
+            </div>
+            <button class="nextButton" onclick="collectData(); scrollToTop();">Next Session >></button>
+        </div>
+    </fieldset>
+
+    <fieldset class="container">
+        <div class="container2">
+            <div class="header">
+                <div class="column-image">
+                    <div id="image-div">
+                        <img src="../images/image.png" alt="Survey form icon">
+                    </div>
+                </div>
+                <div class="column-header">
+                    <h1 id="title"> 2. Appearance </h1>
+                    <p id="description">Second, choose how do you want you DreamyBot to look like. If you choose baby
+                        for
+                        the last session, you
+                        will see this feature when your DreamyBot grow up.</p>
+
+                    <div class="question-container">
+                        <div class="one-choice">
+                            <div><label for="choice">Skin Color</label></div>
+                            <small class="Help" class="form-text text-muted">Pick the skin color of your
+                                DreamyBot.</small>
+                            <hr>
+                            <div class="options">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="skinColorRadios"
+                                        value="white skin color">
+                                    <label class="form-check-label" id='skinColor' for="skinColorRadios1">✋🏻🤚🏻
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="skinColorRadios"
+                                        value="Asian skin color">
+                                    <label class="form-check-label" id='skinColor' for="skinColorRadios2">✋🤚</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="skinColorRadios"
+                                        value="light brown skin color">
+                                    <label class="form-check-label" id='skinColor'
+                                        for="skinColorRadios3">✋🏽🤚🏽</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="skinColorRadios"
+                                        value="black skin color">
+                                    <label class="form-check-label" id='skinColor'
+                                        for="skinColorRadios4">✋🏿🤚🏿</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <div class="one-choice">
+                        <div><label for="choice">Hair Length</label></div>
+                        <small class="Help" class="form-text text-muted">Pick the hair length of your DreamyBot.</small>
+                        <hr>
+                        <div class="options">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="hairLengthRadios" value="short hair"
+                                    data-hair-length-cost='1300'>
+                                <label class="form-check-label" for="hairLengthRadios1">Short($1300)</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="hairLengthRadios"
+                                    value="medium length hair" data-hair-length-cost='2300'>
+                                <label class="form-check-label" for="hairLengthRadios2">Medium-Length ($2300)</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="hairLengthRadios" value="long hair"
+                                    data-hair-length-cost='3300'>
+                                <label class="form-check-label" for="hairLengthRadios3">Long Length ($3300)</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="hairLengthRadios" value="hair"
+                                    data-hair-length-cost='4300'>
+                                <label class="form-check-label" for="hairLengthRadios4">I want my kid to choose by
+                                    themselves. ($4300) </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <div class="text-input">
+                        <div><label for="choice">Hair Color</label></div>
+                        <small class="Help" class="form-text text-muted">Pick a hair color of your DreamyBot.</small>
+                        <hr>
+                        <div class="options">
+                            <textarea class="form-control" id="hair-color" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <div class="one-choice">
+                        <div><label for="choice">Body Weight</label></div>
+                        <small class="Help" class="form-text text-muted">Pick the body Weight of your
+                            DreamyBot.</small>
+                        <hr>
+                        <div class="options">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="bodyWeightRadios" value="thin"
+                                    data-body-weight-cost='5000'>
+                                <label class="form-check-label" for="bodyWeightRadios1">Small Size ($5000)</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="bodyWeightRadios"
+                                    value="medium weight" data-body-weight-cost='10000'>
+                                <label class="form-check-label" for="bodyWeightRadios2">Medium Size ( $10,000)</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="skinColorRadios" value="fat"
+                                    data-body-weight-cost='20000'>
+                                <label class="form-check-label" for="bodyWeightRadios3">Large Size ( $20,000)</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="skinColorRadios" value=""
+                                    data-body-weight-cost='15000'>
+                                <label class="form-check-label" for="bodyWeightRadios4">I want my kid to choose by
+                                    themselves. ($15,000)</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="question-container">
+                    <div class="one-choice">
+                        <div><label for="choice">Body Height</label></div>
+                        <small class="Help" class="form-text text-muted">Pick the body height of your DreamyBot.</small>
+                        <hr>
+                        <div class="options">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="bodyHeightRadios" value="short"
+                                    data-body-height-cost="20000">
+                                <label class="form-check-label" for="bodyHeightRadios1">Short ($20,000)</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="bodyHeightRadios"
+                                    value="medium height" data-body-height-cost="70000">
+                                <label class="form-check-label" for="bodyHeightRadios2">Medium ($70,000)</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="bodyHeightRadios" value="tall"
+                                    data-body-height-cost="130000">
+                                <label class="form-check-label" for="bodyHeightRadios3">Tall ($130,000)</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <div class="text-input">
+                        <div><label for="choice">Purchase a Set of Clothes for your DreamyBot! (MANDATORY)</label>
+                        </div>
+                        <small class="Help" class="form-text text-muted">Out of respect for DreamyBots, you will
+                            need to
+                            purchase a
+                            set of clothes for them when you receive them.</small>
+                        <hr>
+                    </div>
+                    <div class="options">
+                        <label for="clothes1">Blue Hat, Black sweater, Yellow skirt, white shoes...... </label>
+                        <textarea class="form-control" id='clothes' rows="3"></textarea>
+                    </div>
+                </div>
+
+
+                <div class="question-container">
+                    <div class="text-input">
+                        <div><label for="choice">Put Any Other Appearance Preference Here. ($xf100,000)</label></div>
+                        <small class="Help" class="form-text text-muted">If you have any other appearance preference
+                            for
+                            your DreamyBot, put them here. If no, ignore this question.</small>
+                        <hr>
+                        <div class="options">
+                            <label for="implement"> </label>
+                            <textarea class="form-control" id='addition' rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="nextButton" onclick="collectData2(); scrollToTop();">Next Session >></button>
+        </div>
+    </fieldset>
+
+
+
+
+
+
+    <fieldset class="container">
+        <div class="container3">
+            <div class="header">
+                <div class="column-image">
+                    <div id="image-div">
+                        <img src="../images/image.png" alt="Survey form icon">
+                    </div>
+                </div>
+                <div class="column-header">
+                    <h1 id="title"> 3. Personality & Skills </h1>
+                    <p id="description2">Third, you will need to choose what kinds of personality and skills you want
+                        your
+                        DreamyBot
+                        to have.
+
+                    <h2> Q: How to measure personality? </h2>
+                    <p id="instruction">A: In this section, to find the your DreamyBot personality that closely matches
+                        your
+                        preferences, we will use the MBTI personality test as a guide.
+
+
+
+
+
+                    <div class="question-container">
+                        <div class="one-choice">
+                            <div><label for="choice">Extraversion (E) & Introversion (I)</label></div>
+                            <small class="Help" class="form-text text-muted"> Extraversion (E) and Introversion (I)
+                                describe how people gain energy and focus: Extraverts (E) thrive on external
+                                stimulation and interaction with others, while Introverts (I) recharge through solitude
+                                and introspection. In plain words, it's about <b>getting energy from socializing and
+                                    the external world (E)</b> or<b> from spending time alone and reflecting
+                                    (I).</b></small>
+                            <div class="slider-container">
+
+                                <div class="range-slider">
+                                    <span id="rs-bullet-EI" class="rs-label-EI">0</span>
+                                    <input id="rs-range-line-EI" class="rs-range" type="range" value="0" min="0"
+                                        max="100">
+                                </div>
+
+                                <div class="box-minmax">
+                                    <span>0%</span><span>100%</span>
+                                </div>
+                            </div>
+                            <p id='priceE'></p>
+                            <script></script>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-container">
+
+                    <div class="one-choice">
+
+                        <div><label for="choice">Insitution(N) & Sensing(S) </label></div>
+
+                        <small class="Help" class="form-text text-muted"> Intuition (N) and Sensing (S) in MBTI describe
+                            how people perceive information. Intuitives focus on patterns, possibilities, and the big
+                            picture (N), while Sensors rely on concrete details and tangible experiences (S). In
+                            plain
+                            words, it's about <b>seeing the future/Ideal (N)</b> or <b>the present/reality (S).</b>
+                        </small>
+
+                        <div class="slider-container">
+
+                            <div class="range-slider">
+                                <span id="rs-bullet-NS" class="rs-label-NS">0</span>
+                                <input id="rs-range-line-NS" class="rs-range" type="range" value="0" min="0" max="100">
+                            </div>
+
+                            <div class="box-minmax">
+                                <span>0%</span><span>100%</span>
+                            </div>
+
+                        </div>
+                        <p id='priceN'></p>
+                    </div>
+                </div>
+
+                <div class="question-container">
+
+                    <div class="one-choice">
+
+                        <div><label for="choice">Thinking (T) & Feeling (F)</label></div>
+
+                        <small class="Help" class="form-text text-muted"> Thinking (T) and Feeling (F)
+                            describe how people make decisions: Thinkers prioritize logic and objective analysis. In
+                            plain words, it's about
+                            deciding with <b>emotion (F)</b> or <b>Logic (T), While feelers prioritize personal values
+                                and emotions.</b>
+                        </small>
+
+                        <div class="slider-container">
+
+                            <div class="range-slider">
+                                <span id="rs-bullet-TF" class="rs-label-TF">0</span>
+                                <input id="rs-range-line-TF" class="rs-range" type="range" value="0" min="0" max="100">
+                            </div>
+
+                            <div class="box-minmax">
+                                <span>0%</span><span>100%</span>
+                            </div>
+
+                        </div>
+                        <p id='priceT'></p>
+                    </div>
+                </div>
+
+                <div class="question-container">
+
+                    <div class="one-choice">
+
+                        <div><label for="choice">Judging (J) & Perceiving (P) </label></div>
+
+                        <small class="Help" class="form-text text-muted"> Judging (J) and Perceiving (P) in MBTI
+                            describe how people approach tasks and make decisions: Judgers (J) prefer structure,
+                            planning, and decisiveness, while Perceivers (P) are more adaptable, spontaneous, and open
+                            to new information. In plain words, it's about being <b>organized/decisive (J) </b> or <b>
+                                flexible/open-minded (P).</b>
+                        </small>
+
+                        <div class="slider-container">
+
+                            <div class="range-slider">
+                                <span id="rs-bullet-JP" class="rs-label-JP">0</span>
+                                <input id="rs-range-line-JP" class="rs-range" type="range" value="0" min="0" max="100">
+                            </div>
+
+                            <div class="box-minmax">
+                                <span>0%</span><span>100%</span>
+                            </div>
+
+                        </div>
+                        <p id='priceJ'></p>
+                    </div>
+                </div>
+
+
+
+                <div class="question-container">
+                    <div class="text-input">
+                        <div><label for="choice">Skills ($50,000)</label>
+                        </div>
+                        <small class="Help" class="form-text text-muted">Put specific skills that you want your
+                            DreamyBot to have.</small>
+                    </div>
+                    <div class="options">
+                        <label for="skills">Piano, Painting, Coding, Singing...... </label>
+                        <textarea class="form-control" id='skills' rows="3"></textarea>
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <div class="text-input">
+                        <div><label for="choice">Put Any Other Personality Preference Here. ($50,000)</label></div>
+                        <small class="Help" class="form-text text-muted">If you have any other appearance preference
+                            for
+                            your DreamyBot, put them here. If no, ignore this question.</small>
+                        <div class="options">
+                            <label for="implement"> </label>
+                            <textarea class="form-control" id='personality-addition' rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <a href="../preview/preview.html">
+                <button class="nextButton" onclick="collectData3();">Preview</button>
+            </a>
+        </div>
+    </fieldset>
+
+    <script src="customize.js"></script>
+
+
+</body>
+
+</html>

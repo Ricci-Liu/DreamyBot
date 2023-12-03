@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="chatBox.css">
+    <script src="../lib/p5.min.js"></script>
+</head>
+
+<body>
+
+
+    <section class="msger">
+        <header class="msger-header">
+            <div class="msger-header-title">
+                <i class="fas fa-comment-alt"></i> Talk to your DreamyBot and see if their personality fits your
+                preference!
+            </div>
+            <div class="msger-header-options">
+                <span><i class="fas fa-cog"></i></span>
+            </div>
+        </header>
+
+        <main class="msger-chat">
+            <div class="msg left-msg">
+                <div class="msg-img" style="background-image: url(logoRed.png)">
+                </div>
+
+                <div class="msg-bubble">
+                    <div class="msg-info">
+                        <div class="msg-info-name">Your DreamyBot</div>
+
+                    </div>
+
+                    <div class="msg-text">
+                        Hi Mom/Dad, are you willing to take me home?❤️
+                    </div>
+                </div>
+            </div>
+
+            <div class="msg right-msg">
+                <div class="msg-img" style="background-image: url(user.png)">
+                </div>
+
+                <div class="msg-bubble">
+                    <div class="msg-info">
+                        <div class="msg-info-name">You</div>
+                        <div class="msg-info-time"></div>
+                    </div>
+
+                    <div class="msg-text"> Hi, my dear.</div>
+                </div>
+            </div>
+        </main>
+
+        <form class="msger-inputarea">
+            <input type="text" class="msger-input"
+                placeholder="Talk to your DreamyBot and check if you are satisfied with them!" />
+            <button type="submit" class="msger-send-btn">Send</button>
+        </form>
+    </section>
+    <script src="openai.js"></script>
+    <script src="chatBox.js"></script>
+</body>
+
+</html>
