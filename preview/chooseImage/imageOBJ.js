@@ -1,7 +1,7 @@
 let replicate_api_proxy = "https://splashy-rambunctious-leader.glitch.me/";
 let pifuhd_api = "https://gpu.gohai.xyz:3001/";
 let multiImg = [];
-let imageNum = 10;
+let imageNum = 5;
 let currentImg = 0;
 
 let age, gender, skinColor, hairColor, hairLength, bodyWeight, bodyHeight, clothes, addition;
