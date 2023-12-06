@@ -40,3 +40,15 @@ function draw() {
     document.getElementById('personality-cost').textContent = "$" + cost3;
     document.getElementById('total').textContent = "$" + total;
 }
+
+document.getElementById('print').addEventListener('click', function () {
+    var price = document.getElementById('total').value;
+    if (price) {
+        fetch('http://localhost:3000/' + price)
+            .then(response => response.text())
+            .then(data => console.log(data))
+            .catch(error => console.error('Error:', error));
+    } else {
+        alert('Oops, something went wrong...');
+    }
+});
