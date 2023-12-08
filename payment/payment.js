@@ -46,5 +46,6 @@ document.getElementById('print').addEventListener('click', function () {
     // } else {
     //     alert('Oops, something went wrong...');
     // }
+    console.log("hi");
     window.location.href = "../thankyou/thankyou.html";
 });
