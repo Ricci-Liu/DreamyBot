@@ -172,3 +172,17 @@ iframe {
     animation: moveInBottom 5s ease-out;
     animation-fill-mode: backwards;
 }
+
+button {
+    border-style: solid;
+    border-width: 5px;
+    /* border: #ffcd59; */
+    border-radius: 10px;
+    /* padding: 30px; */
+    color: #212529;
+    background: #FFFBE9;
+}
+
+button:hover {
+    background: #C8B6A6;
+}

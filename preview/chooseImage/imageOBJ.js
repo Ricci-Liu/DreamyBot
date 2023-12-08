@@ -29,14 +29,14 @@ function setup() {
     btn1 = createButton(">>");
     btn1.size(70, 60);
     btn1.position(width1 - 100, height / 2);
-    btn1.style("font-size", "50px");
+    btn1.style("font-size", "40px");
     btn1.mouseClicked(nextImage);
     btn1.hide();
 
     btn2 = createButton("<<");
     btn2.size(70, 60);
     btn2.position(60, height / 2);
-    btn2.style("font-size", "50px");
+    btn2.style("font-size", "40px");
     btn2.hide();
     btn2.mouseClicked(previousImage);
     btn2.hide();
@@ -207,7 +207,7 @@ function draw() {
 
         textFont(font);
         textSize(36);
-        let curImg = multiImg.length + 1
+        let curImg = multiImg.length;
         text("Images loading, please wait" + "(" + curImg + "/" + imageNum + ")", -750, -95);
         let rectLength = (curImg / imageNum) * 600;
         fill(0);

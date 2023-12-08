@@ -1,4 +1,5 @@
-let openai_api_proxy = "https://sordid-hexagonal-bunny.glitch.me/";
+
+let openai_api_proxy = "https://clumsy-special-lemming.glitch.me/";
 let E, N, T, J, skill, skills, addition;
 let startGenerate = false;
 let I, S, F, P;
@@ -105,7 +106,7 @@ function sendMessage(text) {
         temperature: 0.7,
     };
     requestOAI("POST", "/v1/chat/completions", params, gotResults);
-    console.log(messages);
+    console.log("hallo");
     // Note: there are additional parameters available, see
     // https://platform.openai.com/docs/api-reference/chat
 }
